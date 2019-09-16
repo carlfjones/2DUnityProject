@@ -47,6 +47,12 @@ TagManager:
   - name: Midground
     uniqueID: 2945948023
     locked: 0
+  - name: Mid-Fore
+    uniqueID: 1175826279
+    locked: 0
   - name: Foreground
     uniqueID: 3405766867
+    locked: 0
+  - name: Sea
+    uniqueID: 1238131537
     locked: 0

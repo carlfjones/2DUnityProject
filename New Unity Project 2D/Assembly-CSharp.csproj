@@ -69,6 +69,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -93,17 +96,14 @@
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.0f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -66,7 +66,10 @@
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\playerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <None Include="Assets\Sprites\free red zombie sprite sheets for game developers\get more at bevouliin_dot_com.txt" />
     <None Include="Assets\Ninja Files\Read Me.txt" />
+    <None Include="Assets\Sprites\Free monster sprite sheets\get more at bevouliin_dot_com.txt" />
+    <None Include="Assets\Sprites\underground worm monster sprite sheets\get more at bevouliin_dot_com.txt" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/acfj/Projects/2DUnityProject/New Unity Project 2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

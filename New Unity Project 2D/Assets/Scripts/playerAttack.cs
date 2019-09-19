@@ -4,15 +4,45 @@ using UnityEngine;
 
 public class playerAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   private bool attacking = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   private float attackTimer = 0;
+   private float attackCd = 0.3f;
+
+   public Collider2D attackTrigger;
+
+   private Animator anim;
+   
+   void Awake ()
+   {
+       anim = gameObject.GetComponent<Animator>();
+       attackTrigger.enabled = false;
+   }
+
+   void Update () 
+   {
+       if(Input.GetKeyDown("space") && !attacking)
+       {
+           attacking = true;
+           attackTimer = attackCd;
+
+           attackTrigger.enabled = true;
+       }
+
+       if(attacking)
+       {
+           if(attackTimer > 0)
+           {
+               attackTimer -= Time.deltaTime;
+           }
+           else
+           {
+               attacking = false;
+               attackTrigger.enabled = false;
+           }
+       }
+
+       anim.SetBool("Isattacking", attacking);
+   }
+
 }

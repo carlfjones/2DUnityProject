@@ -58,6 +58,29 @@ public class monsterAI : MonoBehaviour
         {
             awake = false;
         }
+
+
+    }
+    public void Attack(bool attacking)
+    {
+        bulletTimer += Time.deltaTime;
+
+        if(bulletTimer >= shootInterval)
+        {
+            Vector2 direction = target.transform.position - transform.position;
+            direction.Normalize();
+
+            if(attacking)
+            {
+                GameObject bulletClone;
+                bulletClone = Instantiate(bullet, shootPointLeft.transform.position, shootPointLeft.transform.rotation) as GameObject;
+                bulletClone.GetComponent<Rigidbody2D>().velocity * direction * bulletSpeed;
+
+                bulletTimer = 0;
+
+            }
+        }
+
     }
 
 }

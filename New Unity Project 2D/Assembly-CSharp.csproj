@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Attack_Cone.cs" />
     <Compile Include="Assets\Scripts\attackTrigger.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\fireball.cs" />
     <Compile Include="Assets\Scripts\monsterAI.cs" />
     <Compile Include="Assets\Scripts\playerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

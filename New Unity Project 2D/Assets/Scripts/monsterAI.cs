@@ -5,26 +5,33 @@ using UnityEngine;
 public class monsterAI : MonoBehaviour
 {
     // Integers
-    public int curHealth;
-    public int maxHealth;
+    // public int curHealth;
+    // public int maxHealth;
 
     //Floats
     public float distance;
     public float wakeRange;
-    public float shootInterval;
-    public float bulletSpeed = 100;
-    public float bulletTimer;
+    // public float shootInterval;
+    // public float bulletSpeed = 100;
+    // public float bulletTimer;
 
     //Booleans
     public bool awake = false;
-    public bool lookingRight = true;
+    // public bool lookingRight = true;
 
     //References
-    public GameObject bullet;
+    // public GameObject bullet;
     public Transform target;
     public Animator anim;
-    public Transform shootPointLeft;
-    public Transform shootPointRight;
+    // public Transform shootPointLeft;
+    // public Transform shootPointRight;
+
+    //New method
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+    // public GameObject shootPointLefty;
+
+    public GameObject projectile;
 
     void Awake()
     {
@@ -33,16 +40,28 @@ public class monsterAI : MonoBehaviour
 
     void Start()
     {
-        curHealth = maxHealth;
+        // curHealth = maxHealth;
+        timeBtwShots = startTimeBtwShots;
     }
 
     void Update()
     {
+
         anim.SetBool("Awake", awake);
-        anim.SetBool("LookingRight", lookingRight);
+        // anim.SetBool("LookingRight", lookingRight);
 
         RangeCheck();
 
+    }
+
+    void Shoot()
+    {
+          if(timeBtwShots <= 0){
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+        }else{
+            timeBtwShots -= Time.deltaTime;
+        }
     }
 
     void RangeCheck()
@@ -52,6 +71,7 @@ public class monsterAI : MonoBehaviour
         if(distance < wakeRange)
         {
             awake = true;
+            Shoot();
         }
 
         if (distance > wakeRange)
@@ -61,26 +81,26 @@ public class monsterAI : MonoBehaviour
 
 
     }
-    public void Attack(bool attacking)
-    {
-        bulletTimer += Time.deltaTime;
+    // public void Attack(bool attacking)
+    // {
+    //     bulletTimer += Time.deltaTime;
 
-        if(bulletTimer >= shootInterval)
-        {
-            Vector2 direction = target.transform.position - transform.position;
-            direction.Normalize();
+    //     if(bulletTimer >= shootInterval)
+    //     {
+    //         Vector2 direction = target.transform.position - transform.position;
+    //         direction.Normalize();
 
-            if(attacking)
-            {
-                GameObject bulletClone;
-                bulletClone = Instantiate(bullet, shootPointLeft.transform.position, shootPointLeft.transform.rotation) as GameObject;
-                bulletClone.GetComponent<Rigidbody2D>().velocity * direction * bulletSpeed;
+    //         if(attacking)
+    //         {
+    //             GameObject bulletClone;
+    //             bulletClone = Instantiate(bullet, shootPointLeft.transform.position, shootPointLeft.transform.rotation) as GameObject;
+    //             bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
 
-                bulletTimer = 0;
+    //             bulletTimer = 0;
 
-            }
-        }
+    //         }
+    //     }
 
-    }
+    // }
 
 }

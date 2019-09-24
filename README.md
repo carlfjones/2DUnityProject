@@ -1,4 +1,10 @@
 # 2D Unity Project
 
-This is my first attempt at creating a 2D Platformer game using Unity Engine.
+Platform game work in progress.
+
+This project is written in C# with the game engine Unity.
+
+Below are screenshots from the game:
+
+
 
